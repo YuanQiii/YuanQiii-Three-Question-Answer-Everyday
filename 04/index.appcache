@@ -1,0 +1,14 @@
+CACHE MANIFEST
+#v0.1
+
+CACHE:
+#缓存资源
+
+
+NETWORK:
+#可以使用星号来指示所有其他资源/文件都需要因特网连接
+*
+
+FALLBACK:
+#失败过后的资源目录
+/

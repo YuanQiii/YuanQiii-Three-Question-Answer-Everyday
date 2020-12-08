@@ -1,0 +1,117 @@
+/* 选择器 */
+* {
+  /* 通配符选择器 */
+}
+#div {
+  /* id选择器 */
+}
+
+.parent {
+  /* 类选择器 */
+}
+
+div {
+  /* 元素选择器 */
+}
+
+[title="main"] {
+  /* 属性选择器 */
+}
+
+.parent,.son,.bro,.sis{
+  /* 群选择器 */
+}
+
+.parent div {
+  /* 后代选择器 */
+} 
+
+.parent > .son {
+  /* 子选择器 */
+}
+
+.son + .bro {
+  /* 相邻选择器 */
+} 
+
+.son ~ .sis {
+  /* 兄弟选择器 */
+}
+
+.parent:first-child{
+  /* 伪类选择器：第一个子元素 */
+}
+
+.parent:last-child{
+  /* 伪类选择：最后一个子元素 */
+}
+
+.parent:nth-child(odd){
+  /* 伪类选择：奇数子元素 */
+}
+
+.son:nth-of-type(even){
+  /* 伪类选择：偶数该类元素 */
+}
+
+.son:not(2){
+  /* 伪类选择：排除第二个该类元素 */
+}
+
+/* 继承属性 */
+div {
+  /* 文本系列属性 */
+  text-indent: 2rem;
+  text-align: center;
+  line-height: normal;
+  word-spacing: normal;
+  letter-spacing: normal;
+  text-transform: lowercase;
+  direction: rtl;
+  color: white;
+
+  /* 字体系列属性 */
+  font: 100;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+  font-weight: 100;
+  font-style: italic;
+  font-variant: small-caps;
+  font-stretch: normal;
+  font-size-adjust: none;
+
+  /* 表格布局属性 */
+  caption-side: top;
+  border-collapse: collapse;
+  border-spacing: 2rem;
+  empty-cells: hide;
+  table-layout: auto;
+
+  /* 列表属性 */
+  list-style-type: upper-roman;
+  list-style-image: none;
+  list-style-position: inside;
+  list-style: square;
+
+  /* 生成内容属性 */
+  quotes: '\00AB' '\00BB' '\201E' '\201C';
+
+  /* 光标属性 */
+  cursor: auto;
+
+  /* 页面样式属性 */
+  page-break-inside: auto;
+  orphans: 5;
+
+  /* 所有元素可以继承的属性 */
+  visibility: hidden;
+  opacity: 1;
+  cursor: pointer;
+
+  /* 内联元素可以继承的属性 */
+  /* 1.字体系列属性 */
+  /* 2.除text-indent, text-align以外的文本属性 */
+
+  /* 块级元素可以继承的属性 */
+  /* text-indent, text-align */
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index-1</title>
+</head>
+
+<body>
+  <iframe src="http://127.0.0.1:5500/Three-Question&Answer-Everyday/09/index2.html" frameborder="0" id="index-2"></iframe>
+</body>
+<script>
+  window.onload = function () {
+
+    // 1.localStorage
+    localStorage.setItem('name', 'yuanqiu')
+
+
+    // 2.WebSocket
+    // 初始化一个 WebSocket 对象
+    let ws = new WebSocket('ws://localhost:3000')
+
+    // 建立 WebSocket 连接成功触发事件
+    ws.onopen = event => {
+
+      // 使用 send() 方法发送数据
+      ws.send({
+        now: new Date()
+      })
+    }
+
+    // 接收服务端数据时触发事件
+    ws.onmessage = event => {
+      console.log(event.data);
+    }
+
+    // 断开 web socket 连接成功触发事件
+    ws.onclose = () => {
+      console.log('连接已断开');
+    }
+
+    //3、postMessage
+    /*
+     * A窗口的域名是<http://example.com:8080>，以下是A窗口的script标签下的代码：
+     */
+    // 如果弹出框没有被阻止且加载完成
+    var popup = window.open(...popup);
+
+    // 这行语句没有发送信息出去，即使假设当前页面没有改变location（因为targetOrigin设置不对）
+    popup.postMessage("The user is 'bob' and the password is 'secret'",
+      "https://secure.example.net");
+
+    // 假设当前页面没有改变location，这条语句会成功添加message到发送队列中去（targetOrigin设置对了）
+    popup.postMessage("hello there!", "http://example.org");
+
+    function receiveMessage(event) {
+      // 我们能相信信息的发送者吗?  (也许这个发送者和我们最初打开的不是同一个页面).
+      if (event.origin !== "http://example.org")
+        return;
+
+      // event.source 是我们通过window.open打开的弹出页面 popup
+      // event.data 是 popup发送给当前页面的消息 "hi there yourself!  the secret response is: rheeeeet!"
+    }
+    window.addEventListener("message", receiveMessage, false);
+    
+    // 6、直接引用
+    let index2 = document.getElementById('index-2').contentWindow.document
+    
+  }
+</script>
+
+</html>

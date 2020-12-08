@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      height: 3000px;
+    }
+
+    p {
+      font-size: 5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <a name="top"></a>
+  </div>
+
+  <!-- 方法二：设置锚点 -->
+  <a href="#top">top</a>
+
+  <!-- 方法一 -->
+  <a href="#">top</a>
+
+  <p>top</p>
+</body>
+<script>
+  window.onload = function () {
+    let top = document.querySelector('p'),
+      div = document.querySelector('div')
+
+
+    top.addEventListener('click', scrollTop)
+
+    // 方法三
+    function scrollTo() {
+      window.scrollTo(0, 0)
+    }
+
+    //方法四
+    //执行多次即有多个 # 时，页面不会有响应
+    function anchorPoint() {
+      window.location.href += '#'
+    }
+
+    // 方法五
+    function scrollTop() {
+      document.documentElement.scrollTop = 0
+    }
+  }
+</script>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      margin: auto;
+      margin-top: 20%;
+      border-width: 10px;
+      border: 30px solid transparent;
+    }
+
+    /* 新增选择器 */
+    div:nth-child(1){
+      color: coral;
+    }
+    div {
+      /* 弹性盒模型 */
+      display: flex;
+      
+      /* 颜色透明度 */
+      background-color: rgba(27, 167, 132, .2);
+
+      /* 圆角 */
+      border-radius: 50%;
+
+      /* 阴影 */
+      box-shadow: 3px 3px 3px rgba(0, 64, 128, 0.3);
+
+      /* 渐变 */
+      background: linear-gradient(#de1c31, #40a070 , #11659a);
+      
+      /* 文字溢出 */
+      text-overflow: ellipsis;
+
+      /* 背景效果 */
+      background-size: 100px 100px;
+
+      /* 边框效果 */
+      border-image: url("./border.jpg") 30 30 repeat;
+
+      /* 旋转 */
+      transform: rotate(45deg);
+      
+      /* 倾斜 */
+      transform: skew(150deg, -10deg);
+
+      /* 位移 */
+      transform: translate(20px, 20px);
+
+      /* 缩放 */
+      transform: scale(1.5);
+    }
+
+    /* 媒体查询 */
+    @media (max-width: 1000px) {
+      div {
+        background-color: darkgreen;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <span>span</span>
+  </div>
+
+  <article></article>
+</body>
+</html>

@@ -1,0 +1,29 @@
+div {
+  /* 设置透明度 */
+  opacity: 0;
+
+  /* 降低层级 */
+  z-index: -999;
+
+  /* 设置背景色和前景色为透明 */
+  background-color: transparent;
+  color: transparent;
+
+  /* 设置可见度为隐藏 */
+  visibility: hidden;
+
+  /* 设置绝对定位，移到不可见位置 */
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+
+  /* 沿着X/Y轴旋转90deg，不可见 */
+  transform: rotateX(90deg);
+  transform: rotateY(90deg);
+
+  /* 缩放为0 */
+  transform: scale(0);  
+
+  /* 裁剪 */
+  clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px)
+}

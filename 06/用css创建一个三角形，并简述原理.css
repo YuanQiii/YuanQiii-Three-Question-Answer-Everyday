@@ -1,0 +1,13 @@
+div {
+  /* 设置为IE盒模型 */
+  box-sizing: border-box;
+
+  /* 设置盒子大小 */
+  width: 100px;
+  height: 100px;
+
+  /* 设置边框宽度和颜色，盒子content宽度为0 */
+  border: solid 50px blueviolet;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}

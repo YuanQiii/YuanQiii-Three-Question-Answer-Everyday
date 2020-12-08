@@ -1,0 +1,24 @@
+div:first-child{
+  /* 伪类选择器：第一个子元素 */
+}
+div:only-child {
+  /* 伪类选择器：唯一子元素 */
+}
+div:first-of-type{
+  /* 伪类选择器：第一个该类元素 */
+}
+div:only-of-type{
+  /* 伪类选择器：唯一个该类元素 */
+}
+div:nth-child(odd){
+  /* 伪类选择：奇数子元素 */
+}
+input[type="checkbox"]:checked{
+  /* 单选框或复选框被选中 */
+}
+input[type="button"]:enabled {
+  /* 控制表单控件的可用状态 */
+}
+input[type="button"]:disabled {
+  /* 控制表单控件的禁用状态 */
+}

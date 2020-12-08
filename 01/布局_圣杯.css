@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.holy-grail {
+  padding: 0 300px 0 200px;/* 预留空间 */
+}
+.holy-grail-center {
+  float: left;
+  width: 100%;/* 占据第一行 */
+  height: 100px;
+  background-color: brown;
+}
+.holy-grail-left {
+  float: left;
+  width: 200px;
+  height: 100px;
+  background-color: burlywood;  
+
+  /* 向上移动一行 */
+  margin-left: -100%;
+
+  /* 固定自身定位 */
+  position: relative;
+  left: -200px;
+}
+.holy-grail-right {
+  height: 100px;
+  width: 300px;
+  background-color: cadetblue;
+  float: left;
+
+  /* 属性为自身宽度，移动到航一行的行尾*/
+  margin-right: -300px;
+}

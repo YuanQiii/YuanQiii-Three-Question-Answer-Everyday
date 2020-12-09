@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css的属性content有什么作用呢？有哪些场景可以用到</title>
+  <style>
+    /* content: string value 字符串：可以加入任何字符，包括 Unicode 编码等各种字符 */
+    .box-string::after {
+      content: 'string↗';
+    }
+
+    /* content: uri value 外部资源： 用于引用媒体文件，图片，图标，SVG等*/
+    .box-img::after {
+      content: url(https://img-vip-ssl.a.88cdn.com/img/xunleiadmin/5b9889e14dcdc.png);
+
+      /* content: radial-gradient(circle at 35% 35%, white 10%, pink 70%);
+      display: inline-block;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      overflow: hidden; */
+    }
+
+    /* content: counter values ：调用计数器，可以不使用列表元素实现序号功能。具体请参见 counter-increment 和 counter-reset 属性的用法*/
+
+    h1::before {
+      content: counter(h1)'.';
+    }
+
+    h1 {
+      counter-increment: h1;
+      counter-reset: h2;
+    }
+
+    h2::before {
+      content: counter(h1) '-'counter(h2);
+    }
+
+    h2 {
+      counter-increment: h2;
+      counter-reset: h3;
+      margin-left: 40px;
+    }
+
+    h3::before {
+      content: counter(h1) '-'counter(h2) '-'counter(h3);
+    }
+
+    h3 {
+      counter-increment: h3;
+      margin-left: 80px;
+    }
+
+    /* 引用符号：属于引用符号的取值有 4 种，共 2 对，在 CSS 中用了语义较为清晰的关键词来表示： open-quote、 close-quote、no-open-quote、no-close-quote */
+    /* 自定义引用符号 */
+    /* quotes 可以设置多组引用符号，用以应对次级引用 */
+    .box-quote {
+      quotes: '[' ']' '<<' '>>';
+    }
+    .box-quote::before {
+      content: open-quote;
+    }
+    .box-quote::after {
+      content: close-quote;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  ## 定义
+
+  - content 属性与 :before 及 :after 伪元素配合使用，在元素头或尾部来插入生成内容
+  - 该属性用于定义元素之前或之后放置的生成内容。默认地，这往往是行内内容，不过该内容创建的盒子类型可以用属性 display 控制
+
+  <div class="box-string"></div>
+  <div class="box-img"></div>
+  <div class="box-counter">
+    <h1>大标题</h1>
+    <h2>中标题</h2>
+    <h3>小标题</h3>
+    <h3>小标题</h3>
+    <h2>中标题</h2>
+    <h3>小标题</h3>
+    <h3>小标题</h3>
+    <h1>大标题</h1>
+    <h2>中标题</h2>
+    <h3>小标题</h3>
+    <h3>小标题</h3>
+    <h2>中标题</h2>
+    <h3>小标题</h3>
+    <h3>小标题</h3>
+  </div>
+  <div class="box-quote">box-quote</div>
+</body>
+
+</html>

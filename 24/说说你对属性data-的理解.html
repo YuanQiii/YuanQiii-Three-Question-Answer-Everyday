@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>说说你对属性data-的理解</title>
+</head>
+
+<body>
+
+  # 说说你对属性data-的理解
+
+  - 自定义属性存放数据
+  - 使用 data-* 时，需要注意，data- 之后的单词必须是小写的，但是可以用多个 - 连接
+  - 通过 ele.dataset[属性名] 进行访问。在这里的属性名可以使用驼峰（转换规则和 vue 的组件名称转换一样）
+  - 图片懒加载
+
+  <div data-name="yuan"></div>
+</body>
+<script>
+  window.onload = function(){
+    console.log(document.querySelector('div').dataset.name);
+  }
+</script>
+</html>

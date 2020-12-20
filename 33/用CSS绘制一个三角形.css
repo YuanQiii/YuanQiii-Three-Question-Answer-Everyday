@@ -1,0 +1,7 @@
+/* 一般会用伪元素来实现这种装饰性的效果，content 为空，就不需要 width 了，最后 border 还可以简单点 */
+
+.triangle:after{
+  content: '';
+  border: 35px solid transparent;
+  border-bottom-color: lightgreen;
+}

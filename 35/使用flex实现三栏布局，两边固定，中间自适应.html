@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使用flex实现三栏布局，两边固定，中间自适应</title>
+  <style>
+    .contain {
+      display: flex;
+    }
+    .center {
+      flex: 1;
+      height: 200px;
+      background-color: brown;
+    }
+    .left {
+      width: 100px;
+      height: 200px;
+      background-color: blueviolet;
+    }
+    .right {
+      width: 100px;
+      height: 200px;
+      background-color: blueviolet;
+    }
+  </style>
+</head>
+<body>
+  <div class="contain"> 
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>

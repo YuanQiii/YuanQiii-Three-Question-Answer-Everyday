@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>请手写一个幻灯片的效果</title>
+  <style>
+    .huanDengPic {
+      width: 237px;
+      height: 160px;
+      margin: 50px auto 0;
+      overflow: hidden;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+      background-size: contain;
+      animation: loops 10s infinite;
+    }
+
+    @keyframes loops {
+      0% {
+        background: url(http://img0.dili360.com/pic/2020/06/01/5ed4d2b81c0152t17670211_t.jpg@!rw6) no-repeat;
+      }
+
+      50% {
+        background: url(http://img0.dili360.com//ga/M02/49/A2/wKgBy1nPEYaAVlPHAABPhIqUzPA708.jpg) no-repeat;
+      }
+
+      100% {
+        background: url(http://img0.dili360.com//ga/M00/49/A2/wKgBy1nPKQyAL6pSAAB0Dep5IVo290.jpg) no-repeat;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="huanDengPic"></div>
+</body>
+
+</html>

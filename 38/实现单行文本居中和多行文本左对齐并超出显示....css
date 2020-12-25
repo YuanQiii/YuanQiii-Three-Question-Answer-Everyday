@@ -1,0 +1,31 @@
+.single-text {
+  width: 500px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background: lightblue;
+  display: box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.multi-text {
+  width: 50%;
+  height: 4.5rem;
+  line-height: 1.5;
+  padding: 20px;
+  background: lightblue;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.multi-text:after {
+  content: '...';
+  height: 1.5rem;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
